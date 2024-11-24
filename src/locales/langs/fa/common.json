@@ -16,8 +16,10 @@
     "economicCode":"کد اقتصادی",
     "registrationNumber":"شماره ثبت",
     "trackingCode":"کد رهگیری",
-    "status":"وضعیت"
-    
+    "status":"وضعیت",
+    "save":"ذخیره",
+    "new":"جدید",
+    "mainInformation":"اطلاعات اصلی"
   },
   "property":{
     "list":{
@@ -29,8 +31,9 @@
       "active":"فعال",
       "Pending":"معلق",
       "Blocked":"مسدود",
-      "Cancelled":"باطل شده"
-  
+      "Cancelled":"باطل شده",
+      "noData":"اطلاعاتی برای نمایش وجود ندارد",
+      "noResult":"نتیجه ای وجود ندارد"
     },
     "request":{
       "title":"درخواست خرید دارایی",

@@ -57,32 +57,20 @@ export function FormAndTabs({ title }) {
       value: '2',
     },
     {
-      title: 'برنامه تشکل',
+      title: 'آدرس نمایندگی ها',
       value: '3',
     },
     {
-      title: 'هیات موسس',
+      title: 'property.request.Contact_information',
       value: '4',
     },
     {
-      title: 'هیات مدیره',
+      title: 'property.request.Documents',
       value: '5',
     },
     {
-      title: 'آدرس تشکل / نمایندگی ها',
-      value: '6',
-    },
-    {
-      title: 'property.request.Contact_information',
-      value: '7',
-    },
-    {
-      title: 'property.request.Documents',
-      value: '8',
-    },
-    {
       title: 'property.request.attachments',
-      value: '9',
+      value: '6',
     },
   ];
 
@@ -137,6 +125,7 @@ export function FormAndTabs({ title }) {
         <TabPanel value="1">
           <RequestForm />
         </TabPanel>
+
         <TabPanel value="2">
           <SimpleDataGrid
             handleDataChange={handleDataChange}
@@ -145,7 +134,7 @@ export function FormAndTabs({ title }) {
             gridKey="ahdaf"
           />
         </TabPanel>
-        <TabPanel value="3">
+        <TabPanel value="22">
           <SimpleDataGrid
             handleDataChange={handleDataChange}
             columns={datasource.columns.barname}
@@ -153,7 +142,7 @@ export function FormAndTabs({ title }) {
             gridKey="barname"
           />
         </TabPanel>
-        <TabPanel value="4">
+        <TabPanel value="23">
           <SimpleDataGrid
             handleDataChange={handleDataChange}
             columns={datasource.columns['heyat-moases']}
@@ -161,7 +150,7 @@ export function FormAndTabs({ title }) {
             gridKey="heyat-moases"
           />
         </TabPanel>
-        <TabPanel value="5">
+        <TabPanel value="24">
           <SimpleDataGrid
             handleDataChange={handleDataChange}
             columns={datasource.columns['heyat-modire']}
@@ -169,7 +158,8 @@ export function FormAndTabs({ title }) {
             gridKey="heyat-modire"
           />
         </TabPanel>
-        <TabPanel value="6">
+
+        <TabPanel value="3">
           <SimpleDataGrid
             handleDataChange={handleDataChange}
             columns={datasource.columns.address}
@@ -177,7 +167,7 @@ export function FormAndTabs({ title }) {
             gridKey="address"
           />
         </TabPanel>
-        <TabPanel value="7">
+        <TabPanel value="4">
           <SimpleDataGrid
             handleDataChange={handleDataChange}
             columns={datasource.columns.tamas}
@@ -185,10 +175,10 @@ export function FormAndTabs({ title }) {
             gridKey="tamas"
           />
         </TabPanel>
-        <TabPanel value="8">
+        <TabPanel value="5">
           <CardView columns={datasource.columns.asnad} rows={datasource.rows.asnad} />
         </TabPanel>
-        <TabPanel value="9">
+        <TabPanel value="6">
           <CardView columns={datasource.columns.peyvast} rows={datasource.rows.peyvast} />
         </TabPanel>
       </TabContext>

@@ -11,13 +11,15 @@ import { varHover } from 'src/components/animate';
 import { FlagIcon } from 'src/components/iconify';
 import { usePopover, CustomPopover } from 'src/components/custom-popover';
 import { RTL } from 'src/theme/with-settings/right-to-left';
+import { useSettingsContext } from 'src/components/settings';
 
 // ----------------------------------------------------------------------
 
 export function LanguagePopover({ data = [], sx, ...other }) {
-  const popover = usePopover();
 
+  const popover = usePopover();
   const { onChangeLang, currentLang } = useTranslate();
+  const settings = useSettingsContext();
 
   const [locale, setLocale] = useState(data[0].value);
 
@@ -26,6 +28,7 @@ export function LanguagePopover({ data = [], sx, ...other }) {
   const handleChangeLang = useCallback(
     (newLang) => {
       onChangeLang(newLang);
+      settings.direction = newLang === 'fa' ? 'rtl' : 'ltr'
       popover.onClose();
     },
     [onChangeLang, popover]

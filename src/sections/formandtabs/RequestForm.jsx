@@ -19,6 +19,7 @@ import Box from "@mui/material/Box";
 import {toast} from 'react-toastify';
 import {Iconify} from "../../components/iconify/index";
 import StateSelector from "../../components/state-selector/StateSelector";
+import { useTranslate } from 'src/locales';
 
 export function RequestForm() {
   const initialFormData = {
@@ -46,6 +47,7 @@ export function RequestForm() {
   const [errors, setErrors] = useState({});
   const currentUrl = window.location.href;
   const theme = useTheme();
+  const translate = useTranslate();
 
   const resetFormData = () => {
     setFormData(initialFormData);
@@ -156,10 +158,11 @@ export function RequestForm() {
             <Button
               onClick={handleSubmit}
               variant="contained"
+              sx={{ gap: 1 }}
               size="medium"
               startIcon={<Iconify icon="material-symbols:save-rounded"/>}
             >
-              ذخیره
+              {translate.t('common.save')}
             </Button>
             <StateSelector/>
           </Toolbar>
@@ -168,7 +171,7 @@ export function RequestForm() {
       <form onSubmit={handleSubmit}>
         <Stack spacing={{xs: 3, md: 5}} sx={{mx: 'auto', maxWidth: 'xl'}}>
           <Card>
-            <CardHeader title="اطلاعات اصلی"/>
+            <CardHeader title={translate.t('common.mainInformation')}/>
             <Stack spacing={3} sx={{p: 3}}>
               <Grid container spacing={3}>
                 <Grid item xs={12} sm={6} md={4}>

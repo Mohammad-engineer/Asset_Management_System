@@ -37,19 +37,6 @@ export function BlankView() {
     {
       title: 'اهداف تشکل',
       value: '2'
-    }
-    ,
-    {
-      title: 'برنامه تشکل',
-      value: '3'
-    },
-    {
-      title: 'هیات موسس',
-      value: '4'
-    },
-    {
-      title: 'هیات مدیره',
-      value: '5'
     },
     {
       title: 'آدرس تشکل / نمایندگی ها',
@@ -114,6 +101,7 @@ export function BlankView() {
               <LoadingButton
                 type="submit"
                 variant="contained"
+                sx={{ gap: 1 }}
                 size="medium"
                 loading={false}
                 startIcon={<Iconify icon="material-symbols:save-rounded"/>}

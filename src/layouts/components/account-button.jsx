@@ -7,11 +7,13 @@ import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 
 import { varHover, AnimateAvatar } from 'src/components/animate';
+import { useMockedUser } from 'src/auth/hooks';
 
 // ----------------------------------------------------------------------
 
 export function AccountButton({ open, photoURL, displayName, sx, ...other }) {
   const theme = useTheme();
+  const { user } = useMockedUser();
 
   const renderFallback = (
     <Avatar
@@ -21,7 +23,7 @@ export function AccountButton({ open, photoURL, displayName, sx, ...other }) {
         border: `solid 2px ${theme.vars.palette.background.default}`,
       }}
     >
-      <SvgIcon>
+       <SvgIcon>
         <circle cx="12" cy="6" r="4" fill="currentColor" />
         <path
           fill="currentColor"
@@ -44,7 +46,7 @@ export function AccountButton({ open, photoURL, displayName, sx, ...other }) {
       <NoSsr fallback={renderFallback}>
         <AnimateAvatar
           slotProps={{
-            avatar: { src: renderFallback, alt: displayName },
+            avatar: { src: user?.photoURL, alt: displayName },
             overlay: {
               border: 1,
               spacing: 2,

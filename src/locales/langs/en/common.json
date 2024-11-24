@@ -16,7 +16,10 @@
     "economicCode":"economic code",
     "registrationNumber":"registration number",
     "trackingCode":"tracking code",
-    "status":"status"
+    "status":"status",
+    "save":"save",
+    "new":"new",
+    "mainInformation":"main information"
     
   },
   "property":{
@@ -29,8 +32,9 @@
       "active":"active",
       "Pending":"Pending",
       "Blocked":"Blocked",
-      "Cancelled":"Cancelled"
-  
+      "Cancelled":"Cancelled",
+      "noData":"There is no information to display",
+      "noResult":"There is no result"
     },
     "request":{
       "title":"Request to purchase assets",
