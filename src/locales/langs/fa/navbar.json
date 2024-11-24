@@ -1,0 +1,12 @@
+{
+  "app": "سامانه",
+  "job": "شغل",
+  "user": "کاربر",
+  "travel": "سفر",
+  "invoice": "Invoice",
+  "blog": {
+    "title": "پلاگ",
+    "caption": "کلیدهای میانبر دلخواه"
+  },
+  "subheader": "زیرعنوان"
+}

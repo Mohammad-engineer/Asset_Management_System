@@ -1,0 +1,51 @@
+{
+  "demo": {
+    "lang": "فارسی",
+    "description": "The starting point for your next project is based on MUI. Easy customization helps you build apps faster and better."
+  },
+  "common":{
+    "search":"جستجو",
+    "city":"شهر",
+    "town":"استان",
+    "role":"نقش",
+    "Representative":"نماینده",
+    "description":"توضیحات",
+    "nationalCode":"کد ملی",
+    "typeOfOrganization":"نوع تشکل",
+    "organizationFullName":"نام کامل سازمان",
+    "economicCode":"کد اقتصادی",
+    "registrationNumber":"شماره ثبت",
+    "trackingCode":"کد رهگیری",
+    "status":"وضعیت"
+    
+  },
+  "property":{
+    "list":{
+      "myProperty":"دارایی های من",
+      "dashboard":"داشبورد",
+      "assets":"دارایی ها",
+      "list":"لیست",
+      "all":"همه",
+      "active":"فعال",
+      "Pending":"معلق",
+      "Blocked":"مسدود",
+      "Cancelled":"باطل شده"
+  
+    },
+    "request":{
+      "title":"درخواست خرید دارایی",
+      "goods_information":"اطلاعات اصلی کالا",
+      "List_of_requested_goods":"لیست کالاهای درخواستی",
+      "Contact_information":"اطلاعات تماس",
+      "Documents":"اسناد و مدارک",
+      "attachments":"مستندات و پیوست ها",
+      "Agencies":"نمایندگی ها"
+    },
+    "renewal":{
+      "title":"درخواست تعمیر دارایی"
+    },
+    "revocation":{
+      "title":"درخواست اسقاط دارایی"
+    }
+  }
+}

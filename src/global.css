@@ -1,0 +1,119 @@
+
+/** **************************************
+* Fonts: app
+*************************************** */
+@import '@fontsource/public-sans/400.css';
+@import '@fontsource/public-sans/500.css';
+@import '@fontsource/public-sans/600.css';
+@import '@fontsource/public-sans/700.css';
+@import '@fontsource/public-sans/800.css';
+
+@import '@fontsource/barlow/400.css';
+@import '@fontsource/barlow/500.css';
+@import '@fontsource/barlow/600.css';
+@import '@fontsource/barlow/700.css';
+@import '@fontsource/barlow/800.css';
+
+/** **************************************
+* Fonts: options
+*************************************** */
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/500.css';
+@import '@fontsource/dm-sans/600.css';
+@import '@fontsource/dm-sans/700.css';
+@import '@fontsource/dm-sans/800.css';
+
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/800.css';
+
+@import '@fontsource/nunito-sans/400.css';
+@import '@fontsource/nunito-sans/500.css';
+@import '@fontsource/nunito-sans/600.css';
+@import '@fontsource/nunito-sans/700.css';
+@import '@fontsource/nunito-sans/800.css';
+
+/** **************************************
+* Plugins
+*************************************** */
+/* scrollbar */
+@import './components/scrollbar/styles.css';
+
+/* Fa fonts */
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../public/fonts/iransans/IRANSans.eot'); /* IE9 Compat Modes */
+  src: url('../public/fonts/iransans/IRANSans.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../public/fonts/iransans/IRANSans.woff2') format('woff2'), /* Modern Browsers */ url('../public/fonts/iransans/IRANSans.woff') format('woff'), /* Modern Browsers */ url('../public/fonts/iransans/IRANSans.otf') format('opentype'), /* Open Type Font */ url('../public/fonts/iransans/IRANSans.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-weight: 200;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: 'Yekan';
+  src: url('../public/fonts/yekan/Yekan.eot'); /* IE9 Compat Modes */
+  src: url('../public/fonts/yekan/Yekan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../public/fonts/yekan/Yekan.woff2') format('woff2'), /* Modern Browsers */ url('../public/fonts/yekan/Yekan.woff') format('woff'), /* Modern Browsers */ url('../public/fonts/yekan/Yekan.otf') format('opentype'), /* Open Type Font */ url('../public/fonts/yekan/Yekan.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-weight: 200;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: auto;
+}
+
+@font-face {
+    font-family: 'Sahel';
+    src: url('../public/fonts/sahel/Sahel.eot'); /* IE9 Compat Modes */
+    src: url('../public/fonts/sahel/Sahel.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../public/fonts/sahel/Sahel.woff2') format('woff2'), /* Modern Browsers */ url('../public/fonts/sahel/Sahel.woff') format('woff'), /* Modern Browsers */ url('../public/fonts/sahel/Sahel.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: 200;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-display: auto;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('../public/fonts/vazir/Vazir-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../public/fonts/vazir/Vazir-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../public/fonts/vazir/Vazir-Regular.woff2') format('woff2'), /* Modern Browsers */ url('../public/fonts/vazir/Vazir-Regular.woff') format('woff'), /* Modern Browsers */ url('../public/fonts/vazir/Vazir-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-weight: 200;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: auto;
+}
+/** **************************************
+* Baseline
+*************************************** */
+html {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+body,
+#root,
+#root__layout {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 100%;
+  flex-direction: column;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+input[type='number']::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+input[type='number']::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}

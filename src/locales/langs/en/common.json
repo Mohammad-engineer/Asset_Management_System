@@ -1,0 +1,51 @@
+{
+  "demo": {
+    "lang": "English",
+    "description": "The starting point for your next project is based on MUI. Easy customization helps you build apps faster and better."
+  },
+  "common":{
+    "search":"search",
+    "city":"city",
+    "town":"town",
+    "role":"role",
+    "Representative":"Representative",
+    "description":"description",
+    "nationalCode":"national code",
+    "typeOfOrganization":"type of organization",
+    "organizationFullName":"organization full name",
+    "economicCode":"economic code",
+    "registrationNumber":"registration number",
+    "trackingCode":"tracking code",
+    "status":"status"
+    
+  },
+  "property":{
+    "list":{
+      "myProperty":"my Property",
+      "dashboard":"dashboard",
+      "assets":"assets",
+      "list":"list",
+      "all":"all",
+      "active":"active",
+      "Pending":"Pending",
+      "Blocked":"Blocked",
+      "Cancelled":"Cancelled"
+  
+    },
+    "request":{
+      "title":"Request to purchase assets",
+      "goods_information":"goods information",
+      "List_of_requested_goods":"List of requested goods",
+      "Contact_information":"Contact information",
+      "Documents":"Documents",
+      "attachments":"attachments",
+      "Agencies":"Agencies"
+    },
+    "renewal":{
+      "title":"Request for asset repair"
+    },
+    "revocation":{
+      "title":"Request for asset disposal"
+    }
+  }
+}
