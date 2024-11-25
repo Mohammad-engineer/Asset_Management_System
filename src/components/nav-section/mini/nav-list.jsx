@@ -13,6 +13,7 @@ import { paper } from 'src/theme/styles';
 import { NavItem } from './nav-item';
 import { NavUl, NavLi } from '../styles';
 import { navSectionClasses } from '../classes';
+import { useTranslate } from 'src/locales';
 
 // ----------------------------------------------------------------------
 
@@ -20,6 +21,8 @@ export function NavList({ data, depth, render, cssVars, slotProps, enabledRootRe
   const theme = useTheme();
 
   const pathname = usePathname();
+
+  const translate = useTranslate();
 
   const navItemRef = useRef(null);
 
@@ -44,6 +47,8 @@ export function NavList({ data, depth, render, cssVars, slotProps, enabledRootRe
     setOpenMenu(false);
   }, []);
 
+  const navTitle = data.title.slice(5, data.title.length);
+
   const renderNavItem = (
     <NavItem
       ref={navItemRef}
@@ -52,7 +57,7 @@ export function NavList({ data, depth, render, cssVars, slotProps, enabledRootRe
       path={data.path}
       icon={data.icon}
       info={data.info}
-      title={data.title}
+      title={translate.t(navTitle)}
       caption={data.caption}
       // state
       depth={depth}

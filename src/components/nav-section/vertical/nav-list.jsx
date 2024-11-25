@@ -7,6 +7,7 @@ import { useActiveLink } from 'src/routes/hooks/use-active-link';
 import { NavItem } from './nav-item';
 import { navSectionClasses } from '../classes';
 import { NavUl, NavLi, NavCollapse } from '../styles';
+import { useTranslate } from 'src/locales';
 
 // ----------------------------------------------------------------------
 
@@ -14,6 +15,7 @@ export function NavList({ data, render, depth, slotProps, enabledRootRedirect })
   const pathname = usePathname();
 
   const active = useActiveLink(data.path, !!data.children);
+  const translate = useTranslate();
 
   const [openMenu, setOpenMenu] = useState(active);
 
@@ -34,6 +36,8 @@ export function NavList({ data, render, depth, slotProps, enabledRootRedirect })
     setOpenMenu(false);
   }, []);
 
+  const navTitle = data.title.slice(5, data.title.length);
+
   const renderNavItem = (
     <NavItem
       render={render}
@@ -41,7 +45,7 @@ export function NavList({ data, render, depth, slotProps, enabledRootRedirect })
       path={data.path}
       icon={data.icon}
       info={data.info}
-      title={data.title}
+      title={translate.t(navTitle)}
       caption={data.caption}
       // state
       depth={depth}

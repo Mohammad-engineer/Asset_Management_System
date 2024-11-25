@@ -68,7 +68,7 @@ export function HeaderBase({
     workspaces = true,
     menuButton = true,
     localization = true,
-    notifications = true,
+    notifications = false,
     financeYear = true
   } = {},
 
