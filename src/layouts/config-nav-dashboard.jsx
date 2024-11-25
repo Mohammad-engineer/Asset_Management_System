@@ -50,10 +50,10 @@ export const navData = [
   {
     subheader: '',
     items: [
-      {title: 'lang.property.list.myProperty' , path: paths.dashboard.tashakol.list, icon: ICONS.file},
-      {title: 'lang.property.request.title', path: paths.dashboard.sodoor, icon: ICONS.blog},
-      {title: 'lang.property.renewal.title', path: paths.dashboard.tamdid, icon: ICONS.folder},
-      {title: 'lang.property.revocation.title', path: paths.dashboard.ebtal, icon: ICONS.disabled},
+      {title: 'lang.property.list.myProperty' , path: paths.dashboard.goods.list, icon: ICONS.file},
+      {title: 'lang.property.request.title', path: paths.dashboard.buy, icon: ICONS.blog},
+      {title: 'lang.property.renewal.title', path: paths.dashboard.repair, icon: ICONS.folder},
+      {title: 'lang.property.revocation.title', path: paths.dashboard.Abandonment, icon: ICONS.disabled},
     ],
   },
   /**

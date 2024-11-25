@@ -121,7 +121,7 @@ export function  UserListView() {
 
   const handleSodorRow = useCallback(
     () => {
-      router.push(paths.dashboard.sodoor);
+      router.push(paths.dashboard.buy);
     },
     [router]
   );
@@ -148,7 +148,7 @@ export function  UserListView() {
         description: '',
         isActive: false
       }))
-      router.push(paths.dashboard.tamdid);
+      router.push(paths.dashboard.repair);
     },
     [router]
   );
@@ -175,7 +175,7 @@ export function  UserListView() {
         description: '',
         isActive: false
       }))
-      router.push(paths.dashboard.ebtal);
+      router.push(paths.dashboard.Abandonment);
     },
     [router]
   );
@@ -202,7 +202,7 @@ export function  UserListView() {
           // action={
           //   <Button
           //     component={RouterLink} 
-          //     href={paths.dashboard.sodoor}
+          //     href={paths.dashboard.buy}
           //     variant="contained"
           //     endIcon={<Iconify icon="mingcute:add-line" />}
           //   >

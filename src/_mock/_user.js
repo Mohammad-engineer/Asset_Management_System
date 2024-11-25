@@ -142,7 +142,6 @@ export const _userList = [...Array(10)].map((_, index) => ({
 
   cars: _mock.carsName(index),
   shenaseMeli: '789214',
-  tashakol: 'ایران',
   ostan: 'تهران',
   fullNameTashakol: 'ایران خودرو',
   codeEghtesadi: (Math.random(1,100)*1000).toFixed(0),

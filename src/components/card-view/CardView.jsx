@@ -39,7 +39,7 @@ const CardView = ({ columns, rows }) => {
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
-      <Button color="primary" startIcon={<Iconify icon="mdi:add-circle" />} sx={{alignSelf: 'flex-start'}} onClick={handleAddCard}>
+      <Button color="primary"  startIcon={<Iconify icon="mdi:add-circle" />} sx={{alignSelf: 'flex-start',gap:1}} onClick={handleAddCard}>
         جدید
       </Button>
       <Grid container spacing={2}>

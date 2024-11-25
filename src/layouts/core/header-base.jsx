@@ -63,7 +63,7 @@ export function HeaderBase({
     helpLink = true,
     settings = true,
     purchase = true,
-    contacts = true,
+    contacts = false,
     searchbar = true,
     workspaces = true,
     menuButton = true,

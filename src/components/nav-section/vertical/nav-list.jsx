@@ -15,6 +15,7 @@ export function NavList({ data, render, depth, slotProps, enabledRootRedirect })
   const pathname = usePathname();
 
   const active = useActiveLink(data.path, !!data.children);
+  
   const translate = useTranslate();
 
   const [openMenu, setOpenMenu] = useState(active);

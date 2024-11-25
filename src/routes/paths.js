@@ -43,9 +43,9 @@ export const paths = {
   // DASHBOARD
   dashboard: {
     root: ROOTS.DASHBOARD,
-    sodoor: `${ROOTS.DASHBOARD}/sodoor`,
-    tamdid: `${ROOTS.DASHBOARD}/tamdid`,
-    ebtal: `${ROOTS.DASHBOARD}/ebtal`,
+    buy: `${ROOTS.DASHBOARD}/buy`,
+    repair: `${ROOTS.DASHBOARD}/repair`,
+    Abandonment: `${ROOTS.DASHBOARD}/Abandonment`,
     four: `${ROOTS.DASHBOARD}/four`,
     account:`${ROOTS.DASHBOARD}/account`,
     group: {
@@ -53,9 +53,9 @@ export const paths = {
       five: `${ROOTS.DASHBOARD}/group/five`,
       six: `${ROOTS.DASHBOARD}/group/six`,
     },
-    tashakol: {
-      list: `${ROOTS.DASHBOARD}/tashakol/list`,
-      edit: (id) => `${ROOTS.DASHBOARD}/tashakol/${id}/edit`,
+    goods: {
+      list: `${ROOTS.DASHBOARD}/goods/list`,
+      edit: (id) => `${ROOTS.DASHBOARD}/goods/${id}/edit`,
     },
   }
 };

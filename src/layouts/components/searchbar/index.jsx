@@ -85,7 +85,7 @@ export function Searchbar({ data: navItems = [], sx, ...other }) {
             const { title, path } = item;
 
             const partsTitle = parse(title, match(title, searchQuery));
-
+            console.log({partsTitle})
             const partsPath = parse(path, match(path, searchQuery));
 
             return (

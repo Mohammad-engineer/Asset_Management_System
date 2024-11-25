@@ -57,7 +57,7 @@ export function RequestForm() {
   useEffect(() => {
     const savedFormData = localStorage.getItem("formData");
 
-    if (savedFormData && !currentUrl.includes("sodoor")) {
+    if (savedFormData && !currentUrl.includes("buy")) {
       const parsedData = JSON.parse(savedFormData);
 
       setFormData({
@@ -177,13 +177,13 @@ export function RequestForm() {
                 <Grid item xs={12} sm={6} md={4}>
                   <FormControl fullWidth variant="outlined" error={!!errors.organizationType}>
                     <InputLabel id="organization-type-label">
-                      نوع تشکل صنفی
+                      نوع درخواست 
                       <span style={{color: 'red'}}> *</span>
                     </InputLabel>
                     <Select
                       required
                       labelId="organization-type-label"
-                      label="نوع تشکل صنفی"
+                      label="نوع درخواست"
                       name="organizationType"
                       value={formData.organizationType}
                       onChange={handleChange}
@@ -191,8 +191,8 @@ export function RequestForm() {
                       <MenuItem value="">
                         <em>هیچکدام</em>
                       </MenuItem>
-                      <MenuItem value="national">1. ملی</MenuItem>
-                      <MenuItem value="provincial">2. استانی</MenuItem>
+                      <MenuItem value="national">1. ورد به انبار</MenuItem>
+                      <MenuItem value="provincial">2. خروج از انبار</MenuItem>
                     </Select>
                     {errors.organizationType && <span style={{color: 'red', fontSize: '0.75rem'}}>{errors.organizationType}</span>}
                   </FormControl>
@@ -200,7 +200,7 @@ export function RequestForm() {
                 <Grid item xs={12} sm={6} md={4}>
                   <TextField
                     fullWidth
-                    label="عنوان کامل تشکل"
+                    label="عنوان کامل کالا"
                     name="fullTitle"
                     variant="outlined"
                     value={formData.fullTitle}
@@ -216,7 +216,7 @@ export function RequestForm() {
                 <Grid item xs={12} sm={6} md={4}>
                   <TextField
                     fullWidth
-                    label="نام اختصاری تشکل"
+                    label="نام اختصاری کالا"
                     name="shortTitle"
                     variant="outlined"
                     value={formData.shortTitle}
@@ -225,10 +225,10 @@ export function RequestForm() {
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
                   <FormControl fullWidth variant="outlined">
-                    <InputLabel id="activity-type-label">موضوع فعالیت</InputLabel>
+                    <InputLabel id="activity-type-label"> محل مصرف</InputLabel>
                     <Select
                       labelId="activity-type-label"
-                      label="موضوع فعالیت"
+                      label="محل مصرف"
                       name="activityType"
                       value={formData.activityType}
                       onChange={handleChange}
@@ -236,8 +236,9 @@ export function RequestForm() {
                       <MenuItem value="">
                         <em>هیچکدام</em>
                       </MenuItem>
-                      <MenuItem value="social">1. اجتماعی</MenuItem>
-                      <MenuItem value="software">2. نرم افزار</MenuItem>
+                      <MenuItem value="social">1. ساختمان مرکزی</MenuItem>
+                      <MenuItem value="software">2. ساختمان میرداماد</MenuItem>
+                      <MenuItem value="software2">3. ساختمان کارخانه</MenuItem>
                     </Select>
                   </FormControl>
                 </Grid>
@@ -254,16 +255,19 @@ export function RequestForm() {
                       <MenuItem value="">
                         <em>هیچکدام</em>
                       </MenuItem>
-                      <MenuItem value="centralized">1. متمرکز</MenuItem>
+                      <MenuItem value="centralized">1. نقدی</MenuItem>
+                      <MenuItem value="centralized2">2. تنخواه</MenuItem>
+                      <MenuItem value="centralized3">3. چک بانکی</MenuItem>
+                      <MenuItem value="centralized4">4. اعتباری</MenuItem>
                     </Select>
                   </FormControl>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
                   <FormControl fullWidth variant="outlined">
-                    <InputLabel id="membering-method-label">نحوه عضوگیری</InputLabel>
+                    <InputLabel id="membering-method-label">مرکز خرید</InputLabel>
                     <Select
                       labelId="membering-method-label"
-                      label="نحوه عضوگیری"
+                      label="مرکز خرید"
                       name="memberingMethod"
                       value={formData.memberingMethod}
                       onChange={handleChange}
@@ -271,16 +275,17 @@ export function RequestForm() {
                       <MenuItem value="">
                         <em>هیچکدام</em>
                       </MenuItem>
-                      <MenuItem value="provincial">1. استانی</MenuItem>
+                      <MenuItem value="provincial">1. انبار مرکز (تهرانی)</MenuItem>
+                      <MenuItem value="provincial2">2. انبار استانی (یزد)</MenuItem>
                     </Select>
                   </FormControl>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
                   <FormControl fullWidth variant="outlined">
-                    <InputLabel id="reporting-method-label">نحوه ارائه گزارش عملکرد به ارکان اجرایی و مالی</InputLabel>
+                    <InputLabel id="reporting-method-label">نام تحویل گیرنده</InputLabel>
                     <Select
                       labelId="reporting-method-label"
-                      label="نحوه ارائه گزارش عملکرد به ارکان اجرایی و مالی"
+                      label="نام تحویل گیرنده"
                       name="reportingMethod"
                       value={formData.reportingMethod}
                       onChange={handleChange}
@@ -288,13 +293,15 @@ export function RequestForm() {
                       <MenuItem value="">
                         <em>هیچکدام</em>
                       </MenuItem>
+                      <MenuItem value="provincial">1. علی امینی</MenuItem>
+                      <MenuItem value="provincial2">2. رضا کولیوند</MenuItem>
                     </Select>
                   </FormControl>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
                   <TextField
                     fullWidth
-                    label="کد رهگیری تشکل"
+                    label="شماره فاکتور"
                     name="trackingCode"
                     variant="outlined"
                     value={formData.trackingCode}
@@ -309,10 +316,10 @@ export function RequestForm() {
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
                   <FormControl fullWidth variant="outlined">
-                    <InputLabel id="representer-label">نماینده</InputLabel>
+                    <InputLabel id="representer-label">کاربر ثبت کننده</InputLabel>
                     <Select
                       labelId="representer-label"
-                      label="نماینده"
+                      label="کاربر ثبت کننده"
                       name="representer"
                       value={formData.representer}
                       onChange={handleChange}
@@ -320,6 +327,10 @@ export function RequestForm() {
                       <MenuItem value="">
                         <em>هیچکدام</em>
                       </MenuItem>
+                      <MenuItem value="userInsert1">1. رضا جوادی</MenuItem>
+                      <MenuItem value="userInsert2">2. امیر محمد طهرانی</MenuItem>
+                      <MenuItem value="userInsert3">3. جواد زندی</MenuItem>
+                      <MenuItem value="userInsert4">4. سامان اکبری</MenuItem>
                     </Select>
                   </FormControl>
                 </Grid>
@@ -328,12 +339,12 @@ export function RequestForm() {
           </Card>
 
           <Card>
-            <CardHeader title="اطلاعات مجوز"/>
+            <CardHeader title="اطلاعات تکمیلی"/>
             <Stack spacing={3} sx={{p: 3}}>
               <Grid container spacing={3}>
                 <Grid item xs={12} sm={6} md={4}>
                   <DatePicker
-                    label="تاریخ اعتبار مجوز"
+                    label="تاریخ اعتبار فاکتور"
                     value={formData.licenseValidityDate}
                     onChange={(date) => handleDateChange('licenseValidityDate', date)}
                     renderInput={(params) => <TextField fullWidth variant="outlined" {...params} />}
@@ -343,7 +354,7 @@ export function RequestForm() {
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
                   <DatePicker
-                    label="تاریخ صدور مجوز"
+                    label="تاریخ صدور فاکتور"
                     value={formData.licenseIssuanceDate}
                     onChange={(date) => handleDateChange('licenseIssuanceDate', date)}
                     renderInput={(params) => <TextField fullWidth variant="outlined" {...params} />}
@@ -353,18 +364,18 @@ export function RequestForm() {
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
                   <DatePicker
-                    label="تاریخ تاسیس"
-                    value={formData.establishmentDate}
-                    onChange={(date) => handleDateChange('establishmentDate', date)}
+                    label="تاریخ ثبت"
+                    value={formData.registrationDate}
+                    onChange={(date) => handleDateChange('registrationDate', date)}
                     renderInput={(params) => <TextField fullWidth variant="outlined" {...params} />}
                     sx={{width: '100%'}}
-                    name="establishmentDate"
+                    name="registrationDate"
                   />
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
                   <TextField
                     fullWidth
-                    label="شناسه ملی"
+                    label="شناسه کالا"
                     name="nationalId"
                     variant="outlined"
                     value={formData.nationalId}
@@ -380,7 +391,7 @@ export function RequestForm() {
                 <Grid item xs={12} sm={6} md={4}>
                   <TextField
                     fullWidth
-                    label="شماره ثبت"
+                    label="شماره ثبت انبار"
                     name="registrationNumber"
                     variant="outlined"
                     value={formData.registrationNumber}
@@ -397,7 +408,7 @@ export function RequestForm() {
                 <Grid item xs={12} sm={6} md={4}>
                   <TextField
                     fullWidth
-                    label="کد اقتصادی"
+                    label=" کد اقتصادی کالا"
                     name="economicCode"
                     variant="outlined"
                     value={formData.economicCode}
@@ -410,22 +421,13 @@ export function RequestForm() {
                     helperText={errors.economicCode && <span style={{color: 'red', fontSize: '0.75rem'}}>{errors.economicCode}</span>}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                  <DatePicker
-                    label="تاریخ ثبت"
-                    value={formData.registrationDate}
-                    onChange={(date) => handleDateChange('registrationDate', date)}
-                    renderInput={(params) => <TextField fullWidth variant="outlined" {...params} />}
-                    sx={{width: '100%'}}
-                    name="registrationDate"
-                  />
-                </Grid>
+                
               </Grid>
             </Stack>
           </Card>
 
           <Card>
-            <CardHeader title="اطلاعات ثبتی"/>
+            <CardHeader title="توضیحات"/>
             <Stack spacing={3} sx={{p: 3}}>
               <Grid container spacing={3}>
                 <Grid item xs={8} sm={8} md={8}>

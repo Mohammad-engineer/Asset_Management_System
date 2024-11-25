@@ -50,7 +50,7 @@ export function UserTableRow({ row, selected, onEditRow, onSelectRow, onDeleteRo
         <TableCell sx={{ whiteSpace: 'nowrap' }}>{row.company}</TableCell>
 
         <TableCell sx={{ whiteSpace: 'nowrap' }}>{row.role}</TableCell>
-        <TableCell sx={{ whiteSpace: 'nowrap' }}>{row.tashakol}</TableCell>
+        <TableCell sx={{ whiteSpace: 'nowrap' }}>{row.goods}</TableCell>
         <TableCell sx={{ whiteSpace: 'nowrap' }}>{row.ostan}</TableCell>
         {/* <TableCell sx={{ whiteSpace: 'nowrap' }}>{row.fullNameTashakol}</TableCell> */}
         <TableCell sx={{ whiteSpace: 'nowrap' }}>{row.codeEghtesadi}</TableCell>

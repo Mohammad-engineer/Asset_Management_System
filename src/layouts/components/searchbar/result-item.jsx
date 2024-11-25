@@ -5,10 +5,14 @@ import ListItemButton from '@mui/material/ListItemButton';
 import { varAlpha } from 'src/theme/styles';
 
 import { Label } from 'src/components/label';
+import { useTranslate } from 'src/locales';
 
 // ----------------------------------------------------------------------
 
 export function ResultItem({ title, path, groupLabel, onClickItem }) {
+
+  const translate = useTranslate();
+
   return (
     <ListItemButton
       onClick={onClickItem}
@@ -31,15 +35,21 @@ export function ResultItem({ title, path, groupLabel, onClickItem }) {
       <ListItemText
         primaryTypographyProps={{ typography: 'subtitle2', sx: { textTransform: 'capitalize' } }}
         secondaryTypographyProps={{ typography: 'caption', noWrap: true }}
-        primary={title.map((part, index) => (
-          <Box
+        primary={title.map((part, index) => {
+
+          const partText = part.text.slice(5, part.text.length)
+
+          return(
+            <Box
             key={index}
             component="span"
             sx={{ color: part.highlight ? 'primary.main' : 'text.primary' }}
-          >
-            {part.text}
+            >
+            {translate.t(partText)}
           </Box>
-        ))}
+        );
+        })
+      }
         secondary={path.map((part, index) => (
           <Box
             key={index}

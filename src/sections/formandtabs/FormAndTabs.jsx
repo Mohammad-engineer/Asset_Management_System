@@ -57,7 +57,7 @@ export function FormAndTabs({ title }) {
       value: '2',
     },
     {
-      title: 'آدرس نمایندگی ها',
+      title:  'property.request.Agencies',
       value: '3',
     },
     {
