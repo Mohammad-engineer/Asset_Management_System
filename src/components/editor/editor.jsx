@@ -32,7 +32,7 @@ export const Editor = forwardRef(
       editable = true,
       fullItem = false,
       value: content = '',
-      placeholder = 'توضیحات برای مجوز جدید...',
+      placeholder = 'توضیحات برای دارایی جدید...',
       ...other
     },
     ref

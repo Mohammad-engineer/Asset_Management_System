@@ -54,7 +54,6 @@ const TABLE_HEAD = [
   { id: 'role', label: 'نقش', width: 180 },
   { id: 'address', label: 'کشور' , minWidth: 100},
   { id: 'name', label: 'استان' , minWidth: 100},
-  // { id: 'name', label: 'نام کامل تشکل' , minWidth: 150},
   { id: 'name', label: 'کد اموال', minWidth: 140 },
   { id: 'name', label: 'شماره ثبت' , minWidth: 130},
   { id: 'name', label: 'شماره فاکتور' , minWidth: 130},
